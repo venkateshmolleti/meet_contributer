@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>donate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body style="background-color:#ffff80">
+
+<form  method="POST">
+{% csrf_token %}
+{{ form.errors}}
+{{form.as_p}}
+
+<button class="text-uppercase"
+                                type="submit">Submit</button>
+
+ </form>
+
+</body>
+</html>

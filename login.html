@@ -1,0 +1,32 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/miniprojects/meetcontributer/templets/istyle.css">
+</head>
+<body>
+<div class="login">
+&emsp;&emsp;&emsp;&emsp; <h1>Login to MEET CONTRIBUTER</h1>
+  <form method="post" action="">
+   <!-- <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+    <p><input type="password" name="password" value="" placeholder="Password"></p>
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me">
+        Remember me on this computer
+      </label> -->
+      {% csrf_token %}
+
+       {{ form.errors}}
+                               {{ form.help_text }} 
+      {{form.as_p}}
+    <button class="btn btn-lg btn-primary btn-block text-uppercase"
+                                type="submit">Donate</button>
+    </p>
+     <a href="http://127.0.0.1:8000/main/">to know how contributed</a>
+  </form>
+</div>
+
+<div class="login-help">
+</div>
+</body>
+</html>
+

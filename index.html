@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>the contributed list orphanages</h1>
+
+{% for person in persons %}
+
+<div >
+<table style="width:100%" id="t01">
+<tr>
+<td>name</td>
+<td>donating to</td>
+<td>quality of food (rating)</td>
+<td>quantity of food</td>
+<td>no of cloths</td>
+<td>address</td>
+<td>phonenumber</td>
+<td>pin code</td>
+</tr>
+<tr>
+<td>{{ person.user }}</td>
+<td>{{ person.orpfield}}</td>
+<td>{{ person.quality}}</td>
+<td>{{ person.quantity}}</td>
+<td>{{ person.noofcloths}}</td>
+<td>{{ person.address}}</td>
+<td>{{ person.phoneno}}</td>
+<td>{{ person.pincode}}</td>
+</tr>
+</table>
+
+        </br>
+        </br>
+
+</div>
+
+{% endfor %}
+
+
+
+</body>
+</html>
